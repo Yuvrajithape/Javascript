@@ -32,7 +32,7 @@ console.log(word[5]);
 const name = "Yuvraj";
 console.log(name.slice(-5 , 4))  // Including excluding 
 // slice allows negative value  
-console.log(name.substring(-5,4)) // Substring does not allow negative value . negative value considered as 0 is substring 
+console.log(name.substring(-5,4)) // Substring does not allow negative value . negative value considered as 0 is substring  
 
 
 
