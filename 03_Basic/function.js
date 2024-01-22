@@ -18,3 +18,10 @@ function addtion(num1 , num2)      // (  ) parameter
     return ` ${username} is my name  `;
  }
  console.log(info());;
+
+ // Rest OPerator in Function 
+ function calculatorpriceofcart(...num1)
+ {
+    return num1 ;
+ }
+ console.log(calculatorpriceofcart(10,20,50,60,40));       // it Print all value in array format 
