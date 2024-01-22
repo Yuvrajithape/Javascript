@@ -25,3 +25,17 @@ function addtion(num1 , num2)      // (  ) parameter
     return num1 ;
  }
  console.log(calculatorpriceofcart(10,20,50,60,40));       // it Print all value in array format 
+
+ // Pass object in function 
+
+ const generalinfo = {
+    name : "Yuvraj",
+    contact_No : 7057312503 
+ }
+
+ function biodata(infoo)
+ {
+    console.log(infoo.name);
+    console.log(infoo.contact_No)
+ }
+biodata(generalinfo);
