@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div >
+        <ul class="language">
+            <li> C++</li>
+            <li> java</li>
+        </ul>
+    </div>
+</body>         
+<script>
+    function addlanguage(langName)
+    {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li);
+    }
+    addlanguage("HTML")
+    function addlanguagebestway(langName)
+    {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
+    }
+    addlanguagebestway("TypeScript");
+    // Edit 
+    const thirdele = document.querySelector("li:nth-child(3)");
+    console.log(thirdele);
+    //thirdele.innerHTML = "CSS"
+    const ele = document.createElement('li');
+    ele.innerText = "CSS";
+    thirdele.replaceWith(ele);
+
+
+    const first = document.querySelector("li:nth-child(1)");
+    console.log(first);
+    const newele = document.createElement('li');
+    newele.innerText = "Python";
+    first.replaceWith(newele);
+
+    // remove 
+    const firstele = document.querySelector("li:first-child");
+    firstele.remove();
+</script>
+</html>
