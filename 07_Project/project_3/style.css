@@ -1,0 +1,17 @@
+
+.time{
+    display: flex;
+   justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column; 
+}
+.result{
+
+    border: 2px solid black;
+    margin-top: 5px;
+    width: 100px;
+    height: 30px;
+    border: solid 2px black;
+    background-color: aliceblue;
+}
