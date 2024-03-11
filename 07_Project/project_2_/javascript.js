@@ -5,6 +5,7 @@ form.addEventListener("submit" , function(e)
    const height = parseInt(document.querySelector("#height").value);
    const weight = parseInt(document.querySelector("#Weight").value);
    const result = document.querySelector("#result");
+   const guide = document.querySelector("#WeightGuide");
 
    if(height === '' || height < 0 || isNaN(height))
    {
@@ -18,6 +19,18 @@ form.addEventListener("submit" , function(e)
 
     const bmi  =( weight/((height*height)/10000)).toFixed(2);
     result.innerHTML = `<span> ${bmi} </span>`
+    if(bmi < 18.6 )
+    {
+        guide.innerHTML  =  `<P> Your weight is Normal . </P>`
+    }
+    else if( bmi > 19.6 && bmi < 24.9 )
+    {
+        guide.innerHTML = `<P> Your weight is Normal . </P>`
+    }
+    else{
+        guide.innerHTML = `<P> Your weight is High. </P>`
+    }
+   
 
    }
 })
