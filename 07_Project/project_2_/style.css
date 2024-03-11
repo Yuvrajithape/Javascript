@@ -1,0 +1,11 @@
+html{
+    padding: 0%;
+}
+
+#result{
+    margin-top: 5px;
+   width: 70px;
+   height: 20px;
+   border: solid 2px black;
+}
+
