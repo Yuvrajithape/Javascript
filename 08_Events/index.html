@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    #photos{
+        display: flex;
+     flex-wrap: wrap;
+      justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px; 
+        
+    }
+    .ph{
+        width: 200px;
+        height: auto;
+        margin: 20px;
+    }
+</style>
+<body>
+<div id = "photos">
+    <img src="https://images.pexels.com/photos/20106937/pexels-photo-20106937/free-photo-of-the-sun-will-lead-us-home.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id = "ph1" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/2451249/pexels-photo-2451249.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id = "ph2" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/1105358/pexels-photo-1105358.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id = "ph3" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/20106937/pexels-photo-20106937/free-photo-of-the-sun-will-lead-us-home.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id = "ph4" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/2451249/pexels-photo-2451249.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id = "ph5" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/1105358/pexels-photo-1105358.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id = "ph6" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/20106937/pexels-photo-20106937/free-photo-of-the-sun-will-lead-us-home.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id = "ph7" class = "ph" alt="">
+    <img src="https://images.pexels.com/photos/20106937/pexels-photo-20106937/free-photo-of-the-sun-will-lead-us-home.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id = "ph8" class = "ph" alt="">
+    
+</div>
+
+    <script>
+        const body = document.querySelector('body');
+        document.getElementById('ph4').addEventListener('click' , function(e)
+        {
+            console.log("You clicked on Image 4");
+
+        } , true)
+        document.getElementById('photos').addEventListener('click',function(e)
+        {  
+            // best approach 
+            const removeit = e.target.parentNode;
+            removeit.remove();
+            // body.remove();
+            
+        } , true) 
+        // false Event propogation bubbling format(bottom to up ) true mense capturing format ( top to bottom )
+    </script>
+    
+</body>
+</html>
